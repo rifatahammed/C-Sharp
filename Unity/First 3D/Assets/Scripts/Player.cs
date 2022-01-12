@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space) == true){
+            // Debug.Log("Space Key was pressed down");
+            GetComponent<Rigidbody>().AddForce(Vector3.up *5, ForceMode.VelocityChange);
+        }
     }
 }
